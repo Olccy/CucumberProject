@@ -38,6 +38,9 @@ public class ElementHelper {
     public void sendKey(By key, String text){
         findElement(key).sendKeys(text);
     }
+    public void checkVisible(By key){
+        wait.until(ExpectedConditions.visibilityOf(findElement(key)));
+    }
 
 
 }
